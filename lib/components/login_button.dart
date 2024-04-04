@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {
-  const LoginButton({
-    super.key,
-    required this.buttonText,
-    required this.onPressed,
-  });
+  const LoginButton(
+      {super.key,
+      required this.buttonText,
+      required this.onPressed,
+      required this.assetPath});
 
   final String buttonText;
   final VoidCallback onPressed;
+  final String assetPath;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class LoginButton extends StatelessWidget {
           child: Row(
             children: [
               Image.asset(
-                'lib/images/google.png',
+                assetPath,
                 height: 30,
                 width: 30,
               ),

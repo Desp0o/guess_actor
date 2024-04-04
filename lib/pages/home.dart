@@ -11,7 +11,8 @@ class Home extends StatelessWidget {
           child: Column(
         children: [
           LoginButton(
-            buttonText: 'Login', // Change 'buttonText' to 'Login'
+            buttonText: 'Log in with Google',
+            assetPath: "lib/images/google.png",
             onPressed: () {
               print('Button pressed');
             },
