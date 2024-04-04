@@ -24,10 +24,16 @@ class LoginButton extends StatelessWidget {
                   Border.all(color: const Color.fromARGB(255, 255, 255, 255))),
           child: Row(
             children: [
+              Image.asset(
+                'lib/images/google.png',
+                height: 30,
+                width: 30,
+              ),
+              const SizedBox(width: 15),
               Text(
                 buttonText,
                 style: const TextStyle(color: Colors.white),
-              )
+              ),
             ],
           ),
         ));
