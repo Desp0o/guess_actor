@@ -12,12 +12,24 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(fixedSize: const Size(260, 60)),
-      child: Row(
-        children: [Text(buttonText)],
-      ),
-    );
+    return GestureDetector(
+        onTap: onPressed,
+        child: Container(
+          width: 260,
+          height: 60,
+          padding: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+              borderRadius: const BorderRadius.all(Radius.circular(30)),
+              border:
+                  Border.all(color: const Color.fromARGB(255, 255, 255, 255))),
+          child: Row(
+            children: [
+              Text(
+                buttonText,
+                style: const TextStyle(color: Colors.white),
+              )
+            ],
+          ),
+        ));
   }
 }
